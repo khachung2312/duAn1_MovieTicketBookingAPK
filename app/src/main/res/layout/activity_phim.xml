@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <VideoView
+            android:id="@+id/video_trailer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <ImageView
+            android:id="@+id/img_anhdaidien"
+            android:src="@drawable/phim1"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="160dp"
+            android:layout_height="200dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phim 1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_below="@id/video_trailer"
+            android:layout_marginLeft="180dp"/>
+
+        <LinearLayout
+            android:id="@+id/lnl_thoiluong"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/img_anhdaidien">
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/border_poster"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời lượng"
+                    android:textSize="18sp"
+                    android:textColor="#C5C5C5"/>
+                <TextView android:id="@+id/tv_thoiluong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="120 MIN"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/border_poster"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Độ tuổi"
+                    android:textSize="18sp"
+                    android:textColor="#C5C5C5"/>
+                <TextView android:id="@+id/tv_dotuoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="13 +"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_mota_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnl_thoiluong"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Mô tả"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/tv_mota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mota1"
+            android:layout_below="@id/tv_mota_title"
+            android:textColor="#9C9C9C"
+            android:padding="16dp"/>
+        
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="ĐẶT VÉ"
+            android:layout_below="@id/tv_mota_title"
+            android:layout_marginTop="120dp"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
