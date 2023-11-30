@@ -30,6 +30,9 @@
             android:name=".Activity.DangNhapActivity"
             android:exported="false" />
         <activity
+            android:name=".Activity.DoanhThuActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.WelcomeActivity"
             android:exported="true">
             <intent-filter>
