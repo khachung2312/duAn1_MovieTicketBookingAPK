@@ -1,27 +1,38 @@
 package com.example.duan1_movieticketbooking.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.duan1_movieticketbooking.R;
-import com.example.duan1_movieticketbooking.dao.PhimDao;
 import com.example.duan1_movieticketbooking.model.Phim;
 import com.squareup.picasso.Picasso;
+
 
 import java.util.ArrayList;
 
 public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.PhimViewHolder> {
     ArrayList<Phim> arrPhim = new ArrayList<>();
     Context context;
-    PhimDao phimDao;
-    LayoutInflater inflater;
+
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
+
 
     public PhimAdapter(Context context, ArrayList<Phim> arrPhim) {
         this.context = context;
@@ -31,17 +42,25 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.PhimViewHolder
     @NonNull
     @Override
     public PhimViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_phim, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_phim_avt_trangchu, parent, false);
         return new PhimViewHolder(view);
     }
     @Override
-    public void onBindViewHolder(@NonNull PhimViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PhimViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Phim phim = arrPhim.get(position);
         holder.tvTenPhim.setText(phim.getTenPhim());
 
         Picasso.get().load(phim.getAnhDaiDien()).into(holder.avtPhim);
-    }
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener != null) {
+                    mListener.onItemClick(position);
+                }
+            }
+        });
+    }
 
 
 

@@ -4,19 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
 
-import com.example.duan1_movieticketbooking.R;
 import com.example.duan1_movieticketbooking.databinding.ActivityMainBinding;
-import com.example.duan1_movieticketbooking.fragment.AccountFragment;
-import com.example.duan1_movieticketbooking.fragment.HomeFragment;
-import com.example.duan1_movieticketbooking.fragment.MyTicketFragment;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.duan1_movieticketbooking.fragment.TaiKhoanFragment;
+import com.example.duan1_movieticketbooking.fragment.TrangChuFragment;
+import com.example.duan1_movieticketbooking.fragment.VePhimFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragment());
+        replaceFragment(new TrangChuFragment());
 
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.home) {
-                replaceFragment(new HomeFragment());
+                replaceFragment(new TrangChuFragment());
             } else if (item.getItemId() == R.id.my_ticket) {
-                replaceFragment(new MyTicketFragment());
+                replaceFragment(new VePhimFragment());
             } else if (item.getItemId() == R.id.account) {
-                replaceFragment(new AccountFragment());
+                replaceFragment(new TaiKhoanFragment());
             }
 
             return true;

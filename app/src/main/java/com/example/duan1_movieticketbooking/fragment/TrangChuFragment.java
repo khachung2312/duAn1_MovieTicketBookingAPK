@@ -2,12 +2,9 @@ package com.example.duan1_movieticketbooking.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,18 +15,28 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+
+import com.example.duan1_movieticketbooking.DanhSachPhimActivity;
+import com.example.duan1_movieticketbooking.PhimActivity;
 import com.example.duan1_movieticketbooking.R;
-import com.example.duan1_movieticketbooking.SliderAdapter;
 import com.example.duan1_movieticketbooking.SliderItem;
 import com.example.duan1_movieticketbooking.adapter.PhimAdapter;
+import com.example.duan1_movieticketbooking.adapter.SliderAdapter;
 import com.example.duan1_movieticketbooking.dao.PhimDao;
 import com.example.duan1_movieticketbooking.model.Phim;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class TrangChuFragment extends Fragment {
     private ViewPager2 viewPager2;
     private Handler sliderHandler = new Handler();
     SliderAdapter sliderAdapter;
@@ -40,6 +47,9 @@ public class HomeFragment extends Fragment {
     ArrayList<Phim> arrPhim = new ArrayList<>();
     PhimDao phimDao;
     PhimAdapter phimAdapter;
+    TextView tvXemThem, tvXinChaoUser;
+    SharedPreferences sharedPreferences;
+    ImageView img_iconuser;
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -49,7 +59,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_trang_chu, container, false);
         viewPager2 = view.findViewById(R.id.banner);
         List<SliderItem> sliderItems = new ArrayList<>();
         sliderItems.add(new SliderItem(R.drawable.banner, "https://www.cgv.vn/"));
@@ -95,8 +105,20 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        rcv_phim = view.findViewById(R.id.rcv_phim);
+        tvXinChaoUser = view.findViewById(R.id.tv_xinchao_user);
+        img_iconuser = view.findViewById(R.id.img_iconuser);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String username = sharedPreferences.getString("username", "");
 
+        if (username.isEmpty()) {
+            tvXinChaoUser.setText("MovieTicketBooking");
+            img_iconuser.setVisibility(View.GONE);
+        } else {
+            tvXinChaoUser.setText("Xin chào, " + username);
+        }
+
+
+        rcv_phim = view.findViewById(R.id.rcv_phim);
         inflater = getLayoutInflater();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
         rcv_phim.setLayoutManager(layoutManager);
@@ -104,7 +126,31 @@ public class HomeFragment extends Fragment {
         arrPhim = (ArrayList<Phim>) phimDao.getAllPhim();
         phimAdapter = new PhimAdapter(mContext, arrPhim);
         rcv_phim.setAdapter(phimAdapter);
+
+
+        phimAdapter.setOnItemClickListener(new PhimAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Phim phim = arrPhim.get(position);
+                Intent intent = new Intent(getContext(), PhimActivity.class);
+                intent.putExtra("phim_id", phim.getId());
+                startActivity(intent);
+            }
+        });
+
+        tvXemThem = view.findViewById(R.id.tv_xemthem);
+
+        tvXemThem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), DanhSachPhimActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
+
 
     private  Runnable sliderRunnable = new Runnable() {
         @Override
