@@ -1,8 +1,10 @@
-package com.example.duan1_movieticketbooking;
+package com.example.duan1_movieticketbooking.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.duan1_movieticketbooking.R;
 
 public class DanhSachPhimActivity extends AppCompatActivity {
 
