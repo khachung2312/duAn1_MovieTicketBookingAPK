@@ -1,4 +1,4 @@
-package com.example.duan1_movieticketbooking;
+package com.example.duan1_movieticketbooking.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 
+import com.example.duan1_movieticketbooking.R;
 import com.example.duan1_movieticketbooking.databinding.ActivityMainBinding;
 import com.example.duan1_movieticketbooking.fragment.TaiKhoanFragment;
 import com.example.duan1_movieticketbooking.fragment.TrangChuFragment;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.my_ticket) {
                 replaceFragment(new VePhimFragment());
             } else if (item.getItemId() == R.id.account) {
-                replaceFragment(new TaiKhoanFragment());
+                replaceFragment(new TaiKhoanFragment ());
             }
 
             return true;

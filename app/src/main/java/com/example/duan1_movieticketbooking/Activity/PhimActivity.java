@@ -1,20 +1,19 @@
-package com.example.duan1_movieticketbooking;
+package com.example.duan1_movieticketbooking.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.example.duan1_movieticketbooking.R;
 import com.example.duan1_movieticketbooking.dao.PhimDao;
 import com.example.duan1_movieticketbooking.model.Phim;
 import com.squareup.picasso.Picasso;

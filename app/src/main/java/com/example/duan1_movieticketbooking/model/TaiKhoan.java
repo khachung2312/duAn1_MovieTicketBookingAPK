@@ -1,17 +1,19 @@
 package com.example.duan1_movieticketbooking.model;
 
-public class NguoiDung {
+public class TaiKhoan {
     private int id;
-    private String taiKhoan;
+    private String tenTaiKhoan;
     private String hoTen;
     private String matKhau;
 
-    public NguoiDung() {
+    public
+    TaiKhoan() {
     }
 
-    public NguoiDung(int id, String taiKhoan, String hoTen, String matKhau) {
+    public
+    TaiKhoan(int id, String tenTaiKhoan, String hoTen, String matKhau) {
         this.id = id;
-        this.taiKhoan = taiKhoan;
+        this.tenTaiKhoan = tenTaiKhoan;
         this.hoTen = hoTen;
         this.matKhau = matKhau;
     }
@@ -24,12 +26,12 @@ public class NguoiDung {
         this.id = id;
     }
 
-    public String getTaiKhoan() {
-        return taiKhoan;
+    public String getTenTaiKhoan() {
+        return tenTaiKhoan;
     }
 
-    public void setTaiKhoan(String taiKhoan) {
-        this.taiKhoan = taiKhoan;
+    public void setTenTaiKhoan(String tenTaiKhoan) {
+        this.tenTaiKhoan = tenTaiKhoan;
     }
 
     public String getHoTen() {

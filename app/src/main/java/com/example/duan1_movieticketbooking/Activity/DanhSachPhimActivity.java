@@ -1,4 +1,4 @@
-package com.example.duan1_movieticketbooking;
+package com.example.duan1_movieticketbooking.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +37,8 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import com.example.duan1_movieticketbooking.R;
 
 public class DanhSachPhimActivity extends AppCompatActivity {
     ImageView imgBack;
