@@ -6,12 +6,10 @@ public class TaiKhoan {
     private String hoTen;
     private String matKhau;
 
-    public
-    TaiKhoan() {
+    public TaiKhoan() {
     }
 
-    public
-    TaiKhoan(int id, String tenTaiKhoan, String hoTen, String matKhau) {
+    public TaiKhoan(int id, String tenTaiKhoan, String hoTen, String matKhau) {
         this.id = id;
         this.tenTaiKhoan = tenTaiKhoan;
         this.hoTen = hoTen;

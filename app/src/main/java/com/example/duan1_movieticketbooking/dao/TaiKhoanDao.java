@@ -4,9 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-
 import com.example.duan1_movieticketbooking.database.DbHelper;
+import com.example.duan1_movieticketbooking.model.Phim;
 import com.example.duan1_movieticketbooking.model.TaiKhoan;
 
 import java.util.ArrayList;
@@ -22,8 +21,7 @@ class TaiKhoanDao {
     public void openDatabase() {
         sqLiteDatabase = database.getWritableDatabase();
     }
-    public
-    TaiKhoanDao(Context context) {
+    public TaiKhoanDao(Context context) {
         database = new DbHelper ( context);
         sqLiteDatabase = database.getWritableDatabase();
     }
