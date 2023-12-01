@@ -15,6 +15,9 @@
         android:theme="@style/Theme.DuAn1_MovieTicketBooking"
         tools:targetApi="31">
         <activity
+            android:name=".ThongTinVeActivity"
+            android:exported="false" />
+        <activity
             android:name=".GheNgoiActivity"
             android:exported="false" />
         <activity
