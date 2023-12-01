@@ -48,4 +48,5 @@ dependencies {
     implementation ("com.makeramen:roundedimageview:2.3.0")
     implementation ("androidx.recyclerview:recyclerview:1.3.1")
     implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.github.gastricspark:scrolldatepicker:0.0.1")
 }
