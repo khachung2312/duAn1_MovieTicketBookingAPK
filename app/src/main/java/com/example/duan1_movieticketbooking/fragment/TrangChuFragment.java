@@ -24,8 +24,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.duan1_movieticketbooking.DanhSachPhimActivity;
-import com.example.duan1_movieticketbooking.PhimActivity;
+import com.example.duan1_movieticketbooking.Activity.DanhSachPhimActivity;
+import com.example.duan1_movieticketbooking.Activity.PhimActivity;
 import com.example.duan1_movieticketbooking.R;
 import com.example.duan1_movieticketbooking.SliderItem;
 import com.example.duan1_movieticketbooking.adapter.PhimAdapter;
