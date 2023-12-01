@@ -1,4 +1,4 @@
-package com.example.duan1_movieticketbooking;
+package com.example.duan1_movieticketbooking.Activity;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -36,6 +36,8 @@ import java.util.Date;
 import java.util.List;
 
 import android.graphics.drawable.ColorDrawable;
+
+import com.example.duan1_movieticketbooking.R;
 
 public class RapChieuActivity extends AppCompatActivity {
 
