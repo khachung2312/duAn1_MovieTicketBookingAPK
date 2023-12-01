@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.duan1_movieticketbooking.Activity.DangKyActivity;
 import com.example.duan1_movieticketbooking.Activity.DangNhapActivity;
-import com.example.duan1_movieticketbooking.DoanhThuActivity;
+import com.example.duan1_movieticketbooking.Activity.DoanhThuActivity;
 import com.example.duan1_movieticketbooking.Activity.QuanLyNguoiDungActivity;
 import com.example.duan1_movieticketbooking.R;
 

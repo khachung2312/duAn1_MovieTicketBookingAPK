@@ -18,7 +18,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.duan1_movieticketbooking.PhimActivity;
+import com.example.duan1_movieticketbooking.Activity.PhimActivity;
 import com.example.duan1_movieticketbooking.R;
 import com.example.duan1_movieticketbooking.dao.PhimDao;
 import com.example.duan1_movieticketbooking.model.Phim;
