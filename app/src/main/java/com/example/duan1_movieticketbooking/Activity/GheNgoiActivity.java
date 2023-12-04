@@ -1,4 +1,4 @@
-package com.example.duan1_movieticketbooking;
+package com.example.duan1_movieticketbooking.Activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.duan1_movieticketbooking.R;
 import com.example.duan1_movieticketbooking.adapter.GheNgoiAdapter;
 import com.example.duan1_movieticketbooking.dao.GheNgoiDao;
 import com.example.duan1_movieticketbooking.dao.RapChieuDao;
