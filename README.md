@@ -33,10 +33,10 @@ project
 │   └───movie_admin            <- [Admin, staff mobile app]
 │       │   ...
 │       │   ...
+```
 
 
-
-### Contributors ✨
+## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
