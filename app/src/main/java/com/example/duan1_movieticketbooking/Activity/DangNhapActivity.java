@@ -57,8 +57,6 @@ class DangNhapActivity extends AppCompatActivity {
                         sharedPreferences.edit().putString("username_remember", tenTaiKhoan).apply();
                         sharedPreferences.edit().putString("password_remember", matKhau).apply();
                         sharedPreferences.edit().putBoolean("cbx_remember", true).apply();
-                    } else {
-                        sharedPreferences.edit().clear().apply();
                     }
 
                     startActivity(new Intent(DangNhapActivity.this, MainActivity.class));
