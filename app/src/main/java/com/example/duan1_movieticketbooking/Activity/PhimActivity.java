@@ -84,6 +84,11 @@ public class PhimActivity extends AppCompatActivity {
         });
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String username = sharedPreferences.getString("username", "");
+
+        if ("admin".equals(username)) {
+            btnDatVe.setVisibility(View.GONE);
+        }
         btnDatVe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
