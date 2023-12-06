@@ -21,7 +21,8 @@ A movie tickets booking and management application using `Android Java`
 └───Docs
 │ │ Figma.zip
 │ │ Diagram.png
-│ │ diagram_sql.png
+│ │ Diagram_sql.png
+| | Word.zip
 │ │ ...
 │
 └───MobileApp
@@ -29,7 +30,7 @@ A movie tickets booking and management application using `Android Java`
 │ │ │ ...
 │ │ │ ...
 │ │
-│ └───admin_app <- [Ứng dụng di động cho quản trị viên, nhân viên]
+│ └───admin_app <- [Ứng dụng di động cho quản trị viên]
 │ │ ...
 │ │ ...
 ```
