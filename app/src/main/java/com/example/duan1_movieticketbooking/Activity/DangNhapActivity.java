@@ -58,6 +58,11 @@ class DangNhapActivity extends AppCompatActivity {
                         sharedPreferences.edit().putString("password_remember", matKhau).apply();
                         sharedPreferences.edit().putBoolean("cbx_remember", true).apply();
                     }
+                    else{
+                        sharedPreferences.edit().remove("username_remember").apply();
+                        sharedPreferences.edit().remove("password_remember").apply();
+                        sharedPreferences.edit().remove("cbx_remember").apply();
+                    }
 
                     startActivity(new Intent(DangNhapActivity.this, MainActivity.class));
                     Toast.makeText(DangNhapActivity.this, "Đăng nhập thành công !!!", Toast.LENGTH_SHORT).show();

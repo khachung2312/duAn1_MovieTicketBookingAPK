@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
     static final String dbName = "MTBA";
-    static final int dbVersion = 1;
+    static final int dbVersion = 2;
     public static final String TABLE_NAME_PHIM = "phim";
     public static final String TABLE_NAME_TAIKHOAN = "taikhoan";
     public static final String TABLE_NAME_RAPCHIEU = "rapchieu";
@@ -67,17 +67,17 @@ public class DbHelper extends SQLiteOpenHelper {
                         "ngayChieu TEXT NOT NULL)";
         db.execSQL(createTableRapChieu);
 
-        String setRapChieu1 = "INSERT INTO rapchieu VALUES(1, 'CGV VINCOM PLAZA', 'HaNoi', '0999666333', '2023-12-03')";
+        String setRapChieu1 = "INSERT INTO rapchieu VALUES(1, 'CGV VINCOM PLAZA', 'HaNoi', '0999666333', '2023-12-07')";
         db.execSQL(setRapChieu1);
-        String setRapChieu2 = "INSERT INTO rapchieu VALUES(2, 'CGV Pamulang Timur', 'HaNoi', '0111222333', '2023-12-04')";
+        String setRapChieu2 = "INSERT INTO rapchieu VALUES(2, 'CGV Pamulang Timur', 'HaNoi', '0111222333', '2023-12-08')";
         db.execSQL(setRapChieu2);
-        String setRapChieu3 = "INSERT INTO rapchieu VALUES(3, 'CGV Cresent Mall', 'Ho Chi Minh', '022334455', '2023-12-04')";
+        String setRapChieu3 = "INSERT INTO rapchieu VALUES(3, 'CGV Cresent Mall', 'Ho Chi Minh', '022334455', '2023-12-08')";
         db.execSQL(setRapChieu3);
-        String setRapChieu4 = "INSERT INTO rapchieu VALUES(4, 'CGV Times City', 'HaNoi', '0243333223', '2023-12-04')";
+        String setRapChieu4 = "INSERT INTO rapchieu VALUES(4, 'CGV Times City', 'HaNoi', '0243333223', '2023-12-08')";
         db.execSQL(setRapChieu4);
-        String setRapChieu5 = "INSERT INTO rapchieu VALUES(5, 'CGV Vincom Mega Mall', 'HaNoi', '023423432', '2023-12-05')";
+        String setRapChieu5 = "INSERT INTO rapchieu VALUES(5, 'CGV Vincom Mega Mall', 'HaNoi', '023423432', '2023-12-09')";
         db.execSQL(setRapChieu5);
-        String setRapChieu6 = "INSERT INTO rapchieu VALUES(6, 'CGV Vincom Landmark 81', 'Ho Chi Minh', '08453523', '2023-12-05')";
+        String setRapChieu6 = "INSERT INTO rapchieu VALUES(6, 'CGV Vincom Landmark 81', 'Ho Chi Minh', '08453523', '2023-12-09')";
         db.execSQL(setRapChieu6);
 
         String createTableXuatChieu =
