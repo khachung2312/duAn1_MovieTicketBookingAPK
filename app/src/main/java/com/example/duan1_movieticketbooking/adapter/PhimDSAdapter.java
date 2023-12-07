@@ -133,6 +133,8 @@ public class PhimDSAdapter extends RecyclerView.Adapter<PhimDSAdapter.PhimViewHo
             String username = sharedPreferences.getString("username", "");
             if (!"admin".equals(username)) {
                 imgDeletePhim.setVisibility(View.GONE);
+            } else {
+                btnDatVe.setVisibility(View.GONE);
             }
         }
 
