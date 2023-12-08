@@ -52,7 +52,6 @@ public class DanhSachPhimActivity extends AppCompatActivity {
     LayoutInflater inflater;
     FloatingActionButton floatingBtnAddPhim;
     SharedPreferences sharedPreferences;
-    View ViewDialogAddPhim;
 
 
     @Override
